@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Redirect</title>
+</head>
+<body>
+    <h1>Click the button for a surprise!</h1>
+    <button onclick="redirectToRandom()">Take me there!</button>
+
+    <script>
+        function redirectToRandom() {
+            // Array of websites
+            const websites = [
+                "https://www.steps-charity.org.uk/",
+                "https://www.suicideandco.org/",
+                "https://sepsistrust.org/",
+                "https://www.cancer.org/",
+                "https://www.parkinsons.org.uk/",
+                "https://www.ehaat.org/",
+                "https://www.epilepsy.com/",
+                "https://www.dementia.org.au/"
+];
+
+            
+            // Pick a random website
+            const randomSite = websites[Math.floor(Math.random() * websites.length)];
+            
+            // Redirect to the random website
+            window.location.href = randomSite;
+        }
+    </script>
+</body>
+</html>
